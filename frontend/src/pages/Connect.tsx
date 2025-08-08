@@ -41,9 +41,9 @@ export default function Connect() {
           Slack Message <span className={styles.gradientText}>Connect</span>
         </h1>
         <p className={styles.subtitle}>
-          Connect your Slack workspace to the future of messaging. Send instant
-          messages and schedule them with{" "}
-          <span className={styles.highlight}>quantum precision</span>.
+          Seamlessly link your Slack workspace and unlock the next era of
+          communication — send messages instantly or plan them for the perfect
+          moment. <span className={styles.highlight}>Flawless timing</span>.
         </p>
 
         {/* Button */}
@@ -59,9 +59,9 @@ export default function Connect() {
 
         {/* Features */}
         <div className={styles.features}>
-          <span className={styles.featureItem}>Quantum Encrypted</span>
-          <span className={styles.featureItem}>Zero Data Storage</span>
-          <span className={styles.featureItem}>Instant Setup</span>
+          <span className={styles.featureItem}>End-to-End Secure</span>
+          <span className={styles.featureItem}>No Data Retained</span>
+          <span className={styles.featureItem}>One-Click Connect</span>
         </div>
       </div>
     </div>
