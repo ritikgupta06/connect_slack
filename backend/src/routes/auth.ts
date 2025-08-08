@@ -11,10 +11,6 @@ const CLIENT_SECRET = process.env.SLACK_CLIENT_SECRET!;
 const REDIRECT_URI  = process.env.SLACK_REDIRECT_URI!;
 const FRONTEND_BASE = process.env.FRONTEND_BASE_URL || 'http://localhost:5173';
 
-/* ───────────────────────────────────────────────────────────
- * 1️⃣  Build & return Slack OAuth URL
- *     GET /auth/slack/authorize
- * ─────────────────────────────────────────────────────────── */
 router.get('/slack/authorize', async (req, res) => {
   const state = nanoid();
   req.session.state = state;
@@ -28,10 +24,6 @@ router.get('/slack/authorize', async (req, res) => {
   res.json({ url: url.toString() });
 });
 
-/* ───────────────────────────────────────────────────────────
- * 2️⃣  OAuth callback – code → token
- *     GET /auth/slack/callback
- * ─────────────────────────────────────────────────────────── */
 router.get('/slack/callback', async (req, res) => {
   const { code, state } = req.query as Record<string, string>;
 
@@ -63,7 +55,6 @@ router.get('/slack/callback', async (req, res) => {
   req.session.teamId = resp.team!.id!;
   await new Promise(resolve => req.session.save(resolve));
 
-  // Redirect back to UI (supports popup flow)
   if (req.query.popup === '1') {
     return res.send(`
       <html><body>
@@ -81,9 +72,6 @@ router.get('/slack/callback', async (req, res) => {
   res.redirect(302, `${FRONTEND_BASE}/dashboard`);
 });
 
-/* ───────────────────────────────────────────────────────────
- * 3️⃣  Session helper routes
- * ─────────────────────────────────────────────────────────── */
 router.get('/me', async (req, res) => {
   if (!req.session.teamId) return res.status(401).json({ error: 'unauthorized' });
 
