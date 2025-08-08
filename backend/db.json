@@ -1,0 +1,12 @@
+{
+  "teams": [
+    {
+      "teamId": "T099EH6MXQU",
+      "teamName": "Ignitia",
+      "accessToken": "xoxe.xoxb-1-MS0yLTkzMjA1ODQ3NDU4NDQtOTMwMDM5MDM3NzcwMy05MzAwMzkwOTYzNjA3LTkzMDAzOTA5ODc5MjctNzcxODkxOTAzOGY4M2RlZTk3Yjc0NzE3ZGQ4NDVlMWI3OWUxNzM3OWM5ODk5NjAxOTA5NjZlNjFhOWExNzJlNQ",
+      "refreshToken": "xoxe-1-My0xLTkzMjA1ODQ3NDU4NDQtOTMwMDM5MDk2MzYwNy05MzAwMzkxMDAwMDIzLTc5ZmEwMzZkMzU3MTc3N2UwYThmYTc4Mjg1ZjA3Y2YxMGQyMThiNjliOTM1Y2YxOTU2MGI3ZDhhYWI3MzM4M2I",
+      "expiresIn": 11671,
+      "expiresAt": 1754585778913
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "slack-auto-pilot-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@slack/web-api": "^7.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.19.2",
+    "express-session": "^1.17.3",
+    "lodash-es": "^4.17.21",
+    "lowdb": "^6.0.1",
+    "nanoid": "^5.0.2",
+    "node-schedule": "^2.1.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express-session": "^1.18.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.1"
+  }
+}
