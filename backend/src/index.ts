@@ -11,11 +11,10 @@ import healthRouter   from './routes/health.js';
 const app  = express();
 const PORT = Number(process.env.PORT ?? 4000);
 
-// --- CORS -------------------------------------------------
 const whitelist = (process.env.FRONTEND_WHITELIST ?? '')
   .split(',')
   .map(s => s.trim())
-  .filter(Boolean);                 // remove empty strings
+  .filter(Boolean);
 
 app.use(cors({
   origin: (origin, cb) => {
@@ -25,7 +24,6 @@ app.use(cors({
   credentials: true,
 }));
 
-// --- Middleware ------------------------------------------
 app.use(express.json());
 app.use(session({
   name: 'sc_session',
@@ -33,14 +31,12 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   cookie: {
-    domain: 'local.itshivam.in',   // optional but explicit
-    sameSite: 'none',              // MUST be 'none'
-    secure: false                   // MUST be true on HTTPS
+    domain: 'local.itshivam.in',
+    sameSite: 'none',
+    secure: false
   }
 }));
 
-
-// --- Routes ----------------------------------------------
 app.use('/auth',     authRouter);
 app.use('/messages', messagesRouter);
 app.use('/channels', channelsRouter);
