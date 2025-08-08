@@ -6,7 +6,6 @@ export async function getToken(teamId: string): Promise<string | null> {
   const team = db.data!.teams.find(t => t.teamId === teamId);
   if (!team) return null;
 
-  // if token has expiry and is about to expire, refresh (exercise left as comment)
   if (team.expiresAt && Date.now() > team.expiresAt - 30000 && team.refreshToken) {
     // TODO: implement refresh with slack oauth.v2.access using refresh_token
   }
