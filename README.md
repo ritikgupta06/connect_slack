@@ -50,3 +50,37 @@ Features
 -   Manage (view/cancel) scheduled messages
 
 -   Full-stack deployment ready
+
+
+---
+
+### Architecture Diagram
+```plaintext
+          ┌──────────────────── ┐
+          │  Frontend (Next.js) │
+          │   React Components  │
+          └───────┬─────────────┘
+                  │
+      "Connect to Slack" (OAuth 2.0)
+                  │
+                  ▼
+          ┌──────────────────── ┐
+          │ Slack Authorization │
+          │   (OAuth Consent)   │
+          └─────────┬───────────┘
+                    │ Auth Code
+                    ▼
+          ┌──────────────────── ┐
+          │ Backend (Express)   │
+          │  Token Exchange     │
+          │  Message Handling   │
+          └─────────┬───────────┘
+                    │ Access Token
+                    ▼
+          ┌────────────────────┐
+          │ LowDB Database     │
+          │ Secure Token Store │
+          └────────────────────┘
+```
+
+---
