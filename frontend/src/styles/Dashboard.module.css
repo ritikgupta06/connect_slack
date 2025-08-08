@@ -1,0 +1,181 @@
+.dashboard {
+  position: relative;
+  min-height: 100vh;
+  background: #0a0a0f;
+  padding: 20px;
+  color: white;
+}
+
+.fullScreenCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.glassCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.headerCard {
+  margin-bottom: 20px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.slackIcon {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  border-radius: 12px;
+  margin-right: 12px;
+}
+
+.connected {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  display: block;
+  color: #bbb;
+}
+
+.inputGroup {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 12px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.inputGroup svg {
+  margin-right: 8px;
+  color: #9a6fff;
+}
+
+input,
+textarea {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  width: 100%;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.btnCyan {
+  background: linear-gradient(90deg, #00f5ff, #7b2ff7);
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.btnPurple {
+  background: linear-gradient(90deg, #7b2ff7, #00f5ff);
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.scheduleSection {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 12px;
+  margin-top: 12px;
+}
+
+.badge {
+  background: rgba(0, 245, 255, 0.2);
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.jobList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.jobItem {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 12px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.emptyState {
+  color: #888;
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 100;
+}
+
+.notifySuccess {
+  background: rgba(0, 245, 255, 0.15);
+}
+
+.notifyError {
+  background: rgba(255, 0, 0, 0.15);
+}
+
+.notification button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
