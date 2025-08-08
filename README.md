@@ -57,7 +57,7 @@ Features
 ### Architecture Diagram
 ```plaintext
           ┌──────────────────── ┐
-          │  Frontend (Next.js) │
+          │  Frontend (React+ vite) │
           │   React Components  │
           └───────┬─────────────┘
                   │
@@ -84,3 +84,7 @@ Features
 ```
 
 ---
+
+
+
+
